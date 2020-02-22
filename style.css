@@ -13,18 +13,18 @@ h1 {
     text-align: center;
 }
 
-h2 {
+/* h2 {
     font-size: 4rem;
-}
+} */
 
 
-.middle {
+/* .middle {
     margin: 0;
     text-align: center;
     height: 50%;
     
     
-}
+} */
 
 img {
     height: 60px;
@@ -36,9 +36,9 @@ span {
 
 }
 
-.fiveDay {
+/* .fiveDay {
     background-color: azure;
-}
+} */
 
 /* .col-md-2 {
      
@@ -46,13 +46,13 @@ span {
     left: 0;
     padding-top: 20px;
 }   */
-.col-md-9 {
+/* .col-md-9 {
    
     border: 3px solid black;
     margin: 0;
     display: grid;
    
-}
+} */
 
 
 .degrees {
@@ -64,6 +64,13 @@ span {
 span {
     cursor: pointer;
   }
+
+.card {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    margin: 40px;
+}
   
  
 

@@ -12,6 +12,7 @@ const util = require("util");
 var employees = [];
 
 var writeFileAsync = util.promisify(fs.writeFile);
+var appendFileAsync = util.promisify(fs.appendFile);
 
 
 
@@ -37,12 +38,56 @@ var writeFileAsync = util.promisify(fs.writeFile);
                 name: "email",
                 message: "What is their email?"
             },
+            {
+                type: "confirm",
+                name: "repeat",
+                message:"Would you like to add new employee?"
+            }
             
         ])
         .then(answer=> {
             console.log(answer);
             employees.push(answer);
-            console.log(employees)
+            console.log(employees);
+
+            var html = `<html><head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="style.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script></head>
+            <body><div class="jumbotron">
+            <h1 class="text-center">` + "My Awesome Team!!!" + `</h1>
+        </div><div class="card">
+            <img class="card-img-top" src="/images/pathToYourImage.png" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">${answer.name}</h4>
+              <p class="card-text">
+              This employee is our ${answer.title}, whose Id is ${answer.id}.</n>
+              You can contact this person at ${answer.email}. 
+              </p>
+              <a href="#!" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div></body></html>`;
+            
+            
+            
+            fs.writeFile("index.html",html,function(err){
+                if(err){
+                    console.log(err);
+                }
+                if(answer.repeat){
+                    fs.appendFile("index.html",html,function(err){
+                        if(err){
+                            console.log(err);
+                        }
+                    });
+                    promptUser();
+                }
+    
+            });
+
+            // if(answer.repeat){
+            //     promptUser();
+            // }
+           
 
      
 
