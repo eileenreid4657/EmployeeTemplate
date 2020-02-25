@@ -66,10 +66,13 @@ span {
   }
 
 .card {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     padding: 20px;
     margin: 40px;
+}
+.card-body {
+    font-size: small;
 }
   
  
