@@ -1,0 +1,84 @@
+*,*::before, *::after {
+    box-sizing: border-box
+}
+
+body {
+    background-color: rgb(90, 245, 160);
+
+}
+
+h1 {
+    background-color: rgb(77, 70, 70);
+    color: rgb(90, 245, 160);
+    text-align: center;
+}
+
+/* h2 {
+    font-size: 4rem;
+} */
+
+
+/* .middle {
+    margin: 0;
+    text-align: center;
+    height: 50%;
+    
+    
+} */
+
+img {
+    height: 60px;
+    width: 60px;
+}
+
+span {
+    font-size: 4rem;
+
+}
+
+/* .fiveDay {
+    background-color: azure;
+} */
+
+/* .col-md-2 {
+     
+    top: 0; 
+    left: 0;
+    padding-top: 20px;
+}   */
+/* .col-md-9 {
+   
+    border: 3px solid black;
+    margin: 0;
+    display: grid;
+   
+} */
+
+
+.degrees {
+    display: grid;
+    /*grid-template-columns: auto;
+    justify-content: center;*/
+
+} 
+span {
+    cursor: pointer;
+  }
+
+.card {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    margin: 40px;
+}
+  
+ 
+
+  .col-sm-2 {
+      position: relative;
+      background-color: aquamarine;
+      width: 80px;
+      height: 80px;
+      border: 1px solid black;
+  } 
+   
