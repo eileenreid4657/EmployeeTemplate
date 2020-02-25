@@ -170,8 +170,9 @@ function internInfo() {
             
             
 function teamEnd(){
+    console.log(__dirname);
     fs.writeFile(
-        __dirname + '/Develop/output/team.html', render(employees),
+        __dirname +'/output/team.html', render(employees),
         
         function(err) {
         if (err) {
